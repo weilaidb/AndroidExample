@@ -16,8 +16,10 @@
 package com.example.hellojni;
 
 import android.app.Activity;
+//import Test;
 import android.widget.TextView;
 import android.os.Bundle;
+import android.util.Log;
 
 
 public class HelloJni extends Activity
@@ -33,8 +35,13 @@ public class HelloJni extends Activity
          * function.
          */
         TextView  tv = new TextView(this);
+        Test t = new Test();
 //        tv.setText( stringFromJNI() );
+        Log.e("111111", "strat!!!!!!!!");
+        String str = t.test();
+        Log.e("MISME!!", str);
         tv.setText( unimplementedStringFromJNI() );
+        tv.setText( t.test() );
         setContentView(tv);
     }
 
