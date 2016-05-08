@@ -61,3 +61,17 @@ Java_com_example_hellojni_HelloJni_stringFromJNI( JNIEnv* env,
 
     return (*env)->NewStringUTF(env, "Hello from JNI ! lllklklk!  Compiled with ABI " ABI ".");
 }
+
+/* This is a trivial JNI example where we use a native method
+ * to return a new VM String. See the corresponding Java source
+ * file located at:
+ *
+ *   apps/samples/hello-jni/project/src/com/example/hellojni/HelloJni.java
+ */
+jstring
+Java_com_example_hellojni_HelloJni_unimplementedStringFromJNI( JNIEnv* env,
+                                                  jobject thiz )
+{
+	return (*env)->NewStringUTF(env, "I am another string!!!");
+}
+
