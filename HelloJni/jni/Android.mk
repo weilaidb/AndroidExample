@@ -16,6 +16,8 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
+APP_BUILD_SCRIPT := Android.mk
+
 LOCAL_MODULE    := hello-jni
 LOCAL_SRC_FILES := hello-jni.c com_example_hellojni_Test.c
 

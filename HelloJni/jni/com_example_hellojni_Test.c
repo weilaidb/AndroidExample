@@ -1,4 +1,9 @@
 #include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <malloc.h>
+#include <memory.h>
+//#include <Windows.h>
 #include <jni.h>
 //#include "com_example_hellojni_Test.h"
 
@@ -11,5 +16,5 @@
 jstring Java_com_example_hellojni_Test_test
   (JNIEnv *env, jobject thiz)
 {
-    return (*env)->NewStringUTF(env, "i am test function!!,so goodthings!!");
+    return (*env)->NewStringUTF(env, "i am test function!!,realize the auto combine of jni!!!!");
 }
