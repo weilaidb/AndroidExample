@@ -24,7 +24,9 @@ import android.util.Log;
 
 public class HelloJni extends Activity
 {
-    /** Called when the activity is first created. */
+    private static final boolean flag = false;
+
+	/** Called when the activity is first created. */
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -45,6 +47,23 @@ public class HelloJni extends Activity
         tv.setText( t.test() );
         tv.setText( At.GetWater() );
         setContentView(tv);
+        
+        Boolean bl;
+        Byte []abc;
+        char scon;
+        int i32;
+        long l64;
+        float flnums ;
+        double dl;
+        
+        byte[] ts = {1,2,2,23,3};
+        char uca = 'a';
+        
+        At.GetBasicTypes(flag, ts, uca, 6573, (long)123, (float) 0.1232, 99999999);
+        stringFromJNI();
+        t.test() ;
+//        Jblloean bl;
+        t.getFiled();
     }
 
     /* A native method that is implemented by the

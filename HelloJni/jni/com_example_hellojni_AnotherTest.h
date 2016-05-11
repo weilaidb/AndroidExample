@@ -15,6 +15,14 @@ extern "C" {
 JNIEXPORT jstring JNICALL Java_com_example_hellojni_AnotherTest_GetWater
   (JNIEnv *, jobject);
 
+/*
+ * Class:     com_example_hellojni_AnotherTest
+ * Method:    GetBasicTypes
+ * Signature: (Z[BCIJFD)Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_example_hellojni_AnotherTest_GetBasicTypes
+  (JNIEnv *, jobject, jboolean, jbyteArray, jchar, jint, jlong, jfloat, jdouble);
+
 #ifdef __cplusplus
 }
 #endif
