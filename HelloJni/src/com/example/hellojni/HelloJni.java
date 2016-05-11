@@ -36,12 +36,14 @@ public class HelloJni extends Activity
          */
         TextView  tv = new TextView(this);
         Test t = new Test();
+        AnotherTest At = new AnotherTest();
 //        tv.setText( stringFromJNI() );
         Log.e("111111", "strat!!!!!!!!");
         String str = t.test();
         Log.e("MISME!!", str);
         tv.setText( unimplementedStringFromJNI() );
         tv.setText( t.test() );
+        tv.setText( At.GetWater() );
         setContentView(tv);
     }
 

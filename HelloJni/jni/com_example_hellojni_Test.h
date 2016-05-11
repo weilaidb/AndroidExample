@@ -2,6 +2,12 @@
 #include <jni.h>
 /* Header for class com_example_hellojni_Test */
 
+
+#include <android/log.h>
+#define LOG_TAG "MYJNI"
+#define LOGI(...) __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)
+
+
 #ifndef _Included_com_example_hellojni_Test
 #define _Included_com_example_hellojni_Test
 #ifdef __cplusplus

@@ -16,9 +16,13 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-APP_BUILD_SCRIPT := Android.mk
 
 LOCAL_MODULE    := hello-jni
-LOCAL_SRC_FILES := hello-jni.c com_example_hellojni_Test.c
+LOCAL_SRC_FILES := hello-jni.c \
+					com_example_hellojni_Test.c \
+					com_example_hellojni_AnotherTest.cpp
+
+#因为打印是链接的log库，所以在Android.mk文件中加上如下一句：
+LOCAL_LDLIBS += -llog
 
 include $(BUILD_SHARED_LIBRARY)
