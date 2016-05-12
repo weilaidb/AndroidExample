@@ -46,6 +46,7 @@ public class HelloJni extends Activity
         tv.setText( unimplementedStringFromJNI() );
         tv.setText( t.test() );
         tv.setText( At.GetWater() );
+        tv.setText(t.getMethod());
         setContentView(tv);
         
         Boolean bl;

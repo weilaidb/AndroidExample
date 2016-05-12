@@ -23,6 +23,14 @@ JNIEXPORT jstring JNICALL Java_com_example_hellojni_Test_test
 JNIEXPORT jstring JNICALL Java_com_example_hellojni_Test_getFiled
   (JNIEnv *, jobject);
 
+/*
+ * Class:     com_example_hellojni_Test
+ * Method:    getMethod
+ * Signature: ()Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_example_hellojni_Test_getMethod
+  (JNIEnv *, jobject);
+
 #ifdef __cplusplus
 }
 #endif

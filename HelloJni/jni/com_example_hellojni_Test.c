@@ -179,19 +179,65 @@ JNIEXPORT jstring JNICALL Java_com_example_hellojni_Test_getFiled
 
 	LOGI("Got it here.");
 
-
-
-
-
-
-
-
-
-
-
-
-
     return (*env)->NewStringUTF(env, "i am Java_com_example_hellojni_Test_getFiled functio!,Java_com_example_hellojni_Test_getFiled");
+}
+
+
+
+
+/*
+ * Class:     com_example_hellojni_Test
+ * Method:    getMethod
+ * Signature: ()Ljava/lang/String;
+ */
+JNIEXPORT jstring JNICALL Java_com_example_hellojni_Test_getMethod
+  (JNIEnv *env, jobject instance)
+{
+	jclass clazz;
+	clazz = (*env)->GetObjectClass(env, instance);
+
+	/**
+	 * 获取实例方法的ID
+	 */
+	jmethodID instanceMethodId;
+	instanceMethodId = (*env)->GetMethodID(env, clazz,
+			"instanceMethod", "()Ljava/lang/String;");
+
+	/**
+	 * 获取静态方法的ID
+	 */
+	jmethodID staticMethodId;
+	staticMethodId = (*env)->GetStaticMethodID(env, clazz,
+			"staticMethod","()Ljava/lang/String;");
+
+//	/**
+//	 * 调用实例的方法
+//	 *
+//	 */
+//	jstring instanceMethodResult;
+//	instanceMethodResult = (*env)->CallStringMethod(env,
+//			instance, instanceMethodId);
+//
+//
+//	/**
+//	 * 调用表态方法
+//	 */
+//	jstring staticMethodResult;
+//	staticMethodResult = (*env)->CallStaticByteMethodA(env,);
+//
+
+
+
+
+
+
+
+
+
+
+
+    return (*env)->NewStringUTF(env, "i am get method functio!,Java_com_example_hellojni_Test_getMethod");
+
 }
 
 
